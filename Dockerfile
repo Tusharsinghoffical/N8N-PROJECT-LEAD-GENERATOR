@@ -9,3 +9,6 @@ COPY render.env .env
 
 # Expose port
 EXPOSE 5678
+
+# Use the default entrypoint from the base image
+# Do not override with CMD ["n8n"] as it causes "command not found" error
