@@ -9,8 +9,10 @@ services:
       - N8N_BASIC_AUTH_ACTIVE=true
       - N8N_BASIC_AUTH_USER=tusharsinnghkumar04
       - N8N_BASIC_AUTH_PASSWORD=Tushar@2002
-      - WEBHOOK_URL=https://your-app-name.onrender.com/
+      - WEBHOOK_URL=https://leadgenerator-a9fi.onrender.com/
       - GENERIC_TIMEZONE=Asia/Kolkata
-      - N8N_ENCRYPTION_KEY=some-random-key
+      - N8N_ENCRYPTION_KEY=thisisaverysecurekey
     volumes:
       - ~/.n8n:/home/node/.n8n
+    env_file:
+      - env.env
