@@ -6,13 +6,13 @@ services:
     ports:
       - "5678:5678"
     environment:
-      - N8N_BASIC_AUTH_ACTIVE=true
-      - N8N_BASIC_AUTH_USER=tusharsinnghkumar04
-      - N8N_BASIC_AUTH_PASSWORD=Tushar@2002
+      - N8N_BASIC_AUTH_ACTIVE=false
+      - N8N_PROTOCOL=https
       - WEBHOOK_URL=https://leadgenerator-a9fi.onrender.com/
-      - GENERIC_TIMEZONE=Asia/Kolkata
-      - N8N_ENCRYPTION_KEY=thisisaverysecurekey
+      - N8N_HOST=0.0.0.0
+      - N8N_PORT=5678
+      - NODE_ENV=production
     volumes:
       - ~/.n8n:/home/node/.n8n
     env_file:
-      - env.env
+      - render.env
